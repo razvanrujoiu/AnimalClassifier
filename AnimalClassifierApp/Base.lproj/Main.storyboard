@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Classifier View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ClassifierViewController" customModule="AnimalClassifierApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ktC-qu-T6u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfC-jy-f3n">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="Qcc-8V-bIc">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="cameraBtnWasPressed:" destination="BYZ-38-t0r" id="cuL-Ud-7L2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8U-Hb-qWd" customClass="RoundedVisualEffectView" customModule="AnimalClassifierApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="523" width="335" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Cnu-Qf-zvy">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the camera button to choose an image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="YKj-Xq-crO">
+                                            <rect key="frame" x="8" y="8" width="319" height="64"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="YKj-Xq-crO" firstAttribute="leading" secondItem="Cnu-Qf-zvy" secondAttribute="leading" constant="8" id="40e-Bz-0KS"/>
+                                        <constraint firstAttribute="bottom" secondItem="YKj-Xq-crO" secondAttribute="bottom" constant="8" id="9f4-cS-crT"/>
+                                        <constraint firstItem="YKj-Xq-crO" firstAttribute="top" secondItem="Cnu-Qf-zvy" secondAttribute="top" constant="8" id="9nR-vL-ty9"/>
+                                        <constraint firstAttribute="trailing" secondItem="YKj-Xq-crO" secondAttribute="trailing" constant="8" id="vUv-Ab-jfN"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="jmC-l8-H04"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ktC-qu-T6u" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="069-c7-MO3"/>
+                            <constraint firstItem="ktC-qu-T6u" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CIb-b4-ri9"/>
+                            <constraint firstItem="ktC-qu-T6u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jjk-zT-ocK"/>
+                            <constraint firstItem="FfC-jy-f3n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aMk-Ce-3FS"/>
+                            <constraint firstItem="i8U-Hb-qWd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cZt-in-4sG"/>
+                            <constraint firstItem="FfC-jy-f3n" firstAttribute="top" secondItem="i8U-Hb-qWd" secondAttribute="bottom" constant="20" id="eFY-vx-Qgg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i8U-Hb-qWd" secondAttribute="trailing" constant="20" id="pW0-j4-DeX"/>
+                            <constraint firstItem="FfC-jy-f3n" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r1Z-7Q-Iqp"/>
+                            <constraint firstItem="ktC-qu-T6u" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rHf-QQ-un3"/>
+                            <constraint firstItem="FfC-jy-f3n" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yot-FD-bwL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="classificationLabel" destination="YKj-Xq-crO" id="Qqe-ID-7Tv"/>
+                        <outlet property="imageView" destination="ktC-qu-T6u" id="vx1-qY-Bu6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
